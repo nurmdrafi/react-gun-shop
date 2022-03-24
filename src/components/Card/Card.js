@@ -8,7 +8,9 @@ const Card = (props) => {
   const addToCart = props.addToCart;
   return (
     <div className="card">
+      <div className="image-container">
       <img src={img} alt={name} />
+      </div>
       <h2>{name}</h2>
       <p>Bullet Type: {bullet}</p>
       <p>Capacity: {capacity}</p>
