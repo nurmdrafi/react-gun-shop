@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "./components/Header/Header";
 import React, { useEffect, useState } from "react";
-import Card from "./components/Card/Card";
+import Guns from "./components/Guns/Guns";
 
 function App() {
   const [guns, setGuns] = useState([]);
@@ -10,14 +10,14 @@ function App() {
       .then((res) => res.json())
       .then((data) => setGuns(data));
   }, []);
+  const [count , setCount] = useState(0);
+  const addToCart = () =>{
+    setCount(count + 1)
+  }
   return (
     <div className="App">
-      <Header></Header>
-      <div className="card-container">
-        {guns.map((gun) => (
-          <Card key={gun.id} gun={gun}></Card>
-        ))}
-      </div>
+      <Header count={count}></Header>
+      <Guns guns={guns} addToCart={addToCart}></Guns>
     </div>
   );
 }

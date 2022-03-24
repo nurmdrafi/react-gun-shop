@@ -9,3 +9,11 @@ img {
   width: 250px;
   height: 200px;
 }
+p{
+    margin: 0;
+}
+.card-bottom{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
