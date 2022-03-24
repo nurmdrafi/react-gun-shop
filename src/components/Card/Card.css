@@ -1,0 +1,11 @@
+.card {
+  border: 1px solid red;
+  height: 400px;
+}
+
+img {
+  object-fit: contain;
+  object-position: center;
+  width: 250px;
+  height: 200px;
+}

@@ -13,9 +13,11 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
-      {
-        guns.map(gun => <Card key={gun.id} gun={gun}></Card>)
-      }
+      <div className="card-container">
+        {guns.map((gun) => (
+          <Card key={gun.id} gun={gun}></Card>
+        ))}
+      </div>
     </div>
   );
 }

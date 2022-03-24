@@ -1,10 +1,13 @@
 import React from 'react';
+import './Card.css'
 
 const Card = (props) => {
-    const {name} = props.gun
+    const {name, img, price} = props.gun
     return (
-        <div>
+        <div className='card'>
           <h2>{name}</h2> 
+          <img src={img} alt={name} />
+          <h4>Price: {price}</h4>
         </div>
     );
 };
