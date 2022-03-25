@@ -16,7 +16,7 @@ const Card = (props) => {
       <p>Capacity: {capacity}</p>
       <p>Action: {action}</p>
       <div className="card-bottom">
-          <button onClick={addToCart}><FontAwesomeIcon  icon={faCartFlatbed}></FontAwesomeIcon></button>
+          <button onClick={() => addToCart(props.gun)}><FontAwesomeIcon  icon={faCartFlatbed}></FontAwesomeIcon></button>
         <h2>${price}</h2>
       </div>
     </div>

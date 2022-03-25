@@ -11,9 +11,14 @@ function App() {
       .then((data) => setGuns(data));
   }, []);
   const [count , setCount] = useState(0);
-  const addToCart = () =>{
-    setCount(count + 1)
+  const [cart, setCart] = useState([]);
+  const addToCart = (item) =>{
+    setCount(count + 1);
+    // const selectedItems = guns.find(gun => gun.id === id);
+    const newCart = [...cart, item];
+    setCart(newCart);
   }
+  console.log('cart', cart);
   return (
     <div className="App">
       <Header count={count}></Header>
